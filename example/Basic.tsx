@@ -6,7 +6,8 @@ import { DemoData } from './utils/DemoData';
 import * as ExampleFunction from './utils/ExampleFunctions';
 import Nav from './utils/Nav';
 import Tips from './utils/Tips';
-import withDragDropContext from './utils/withDnDContext';
+import { DndProvider } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 import 'antd/lib/style/index.css';
 import { PopoverComponent } from './plugins/PopoverPlugin';
 import { RowHeaderComponent } from './plugins/RowHeader';
@@ -45,23 +46,25 @@ class Basic extends Component<{}, IBasicState> {
         <Nav />
         <div>
           <h3 style={{ textAlign: 'center' }}>Basic example</h3>
-          <Scheduler
-            RowHeaderFC={RowHeaderComponent}
-            PopoverFC={PopoverComponent}
-            EventFC={EventComponentRound}
-            ColumnHeaderFC={ColumnHeaderComponent}
-            schedulerData={viewModel}
-            prevClick={ExampleFunction.prevClick.bind(this)}
-            nextClick={ExampleFunction.nextClick.bind(this)}
-            onSelectDate={ExampleFunction.onSelectDate.bind(this)}
-            onViewChange={ExampleFunction.onViewChange.bind(this)}
-            updateEventStart={ExampleFunction.updateEventStart.bind(this)}
-            updateEventEnd={ExampleFunction.updateEventEnd.bind(this)}
-            moveEvent={ExampleFunction.moveEvent.bind(this)}
-            newEvent={ExampleFunction.newEvent.bind(this)}
-            newStock={ExampleFunction.newStock.bind(this)}
-            onSetAddMoreState={ExampleFunction.onSetAddMoreState.bind(this)}
-          />
+          <DndProvider backend={HTML5Backend}>
+            <Scheduler
+              RowHeaderFC={RowHeaderComponent}
+              PopoverFC={PopoverComponent}
+              EventFC={EventComponentRound}
+              ColumnHeaderFC={ColumnHeaderComponent}
+              schedulerData={viewModel}
+              prevClick={ExampleFunction.prevClick.bind(this)}
+              nextClick={ExampleFunction.nextClick.bind(this)}
+              onSelectDate={ExampleFunction.onSelectDate.bind(this)}
+              onViewChange={ExampleFunction.onViewChange.bind(this)}
+              updateEventStart={ExampleFunction.updateEventStart.bind(this)}
+              updateEventEnd={ExampleFunction.updateEventEnd.bind(this)}
+              moveEvent={ExampleFunction.moveEvent.bind(this)}
+              newEvent={ExampleFunction.newEvent.bind(this)}
+              newStock={ExampleFunction.newStock.bind(this)}
+              onSetAddMoreState={ExampleFunction.onSetAddMoreState.bind(this)}
+            />
+          </DndProvider>
         </div>
         <Tips />
       </div>
@@ -69,4 +72,4 @@ class Basic extends Component<{}, IBasicState> {
   }
 }
 
-export default withDragDropContext(Basic);
+export default Basic;
