@@ -1,18 +1,18 @@
-import * as React from "react";
-import { Component, useState } from "react";
+import * as React from 'react';
+import { Component, useState } from 'react';
 import Scheduler, {
   SchedulerData,
   SchedulerViewTypes,
   NonAgendaCellHeaderTemplateResolverArgs,
-} from "../src/Scheduler";
-import * as moment from "moment";
-import * as ExampleFunction from "./utils/ExampleFunctions";
-import { DemoData } from "./utils/DemoData";
-import Nav from "./utils/Nav";
-import withDragDropContext from "./utils/withDnDContext";
-import { EventComponentRound } from "./plugins/EventPlugin";
-import { PopoverComponent } from "./plugins/PopoverPlugin";
-import { RowHeaderComponent } from "./plugins/RowHeader";
+} from '../src/Scheduler';
+import * as moment from 'moment';
+import * as ExampleFunction from './utils/ExampleFunctions';
+import { DemoData } from './utils/DemoData';
+import Nav from './utils/Nav';
+import withDragDropContext from './utils/withDnDContext';
+import { EventComponentRound } from './plugins/EventPlugin';
+import { PopoverComponent } from './plugins/PopoverPlugin';
+import { RowHeaderComponent } from './plugins/RowHeader';
 
 class CustomHeaders extends Component<{}, { viewModel: SchedulerData }> {
   constructor(props: Readonly<{}>) {
@@ -26,7 +26,7 @@ class CustomHeaders extends Component<{}, { viewModel: SchedulerData }> {
       false,
       {
         calendarPopoverEnabled: false,
-      },
+      }
     );
     schedulerData.setResources(DemoData.resources);
     schedulerData.setEvents(DemoData.events);
@@ -42,8 +42,9 @@ class CustomHeaders extends Component<{}, { viewModel: SchedulerData }> {
       <div>
         <Nav />
         <div>
-          <h3 style={{ textAlign: "center" }}>Custom table headers (with disabled calendar popup)</h3>
-          <Scheduler schedulerData={viewModel}
+          <h3 style={{ textAlign: 'center' }}>Custom table headers (with disabled calendar popup)</h3>
+          <Scheduler
+            schedulerData={viewModel}
             EventFC={EventComponentRound}
             PopoverFC={PopoverComponent}
             RowHeaderFC={RowHeaderComponent}
@@ -55,12 +56,12 @@ class CustomHeaders extends Component<{}, { viewModel: SchedulerData }> {
             updateEventEnd={ExampleFunction.updateEventEnd.bind(this)}
             moveEvent={ExampleFunction.moveEvent.bind(this)}
             newEvent={ExampleFunction.newEvent.bind(this)}
+            newStock={ExampleFunction.newStock.bind(this)}
           />
         </div>
       </div>
     );
   }
-
 }
 
 export default withDragDropContext(CustomHeaders);
