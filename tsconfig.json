@@ -12,9 +12,7 @@
     "target": "es5",
     "strict": false,
     "moduleResolution": "node",
+    "declaration": true
   },
-  "include": [
-    "./src/**/**/*",
-    "./example/**/**/*"
-  ]
+  "include": ["./src/**/**/*", "./example/**/**/*"]
 }
