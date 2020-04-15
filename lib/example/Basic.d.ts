@@ -10,5 +10,4 @@ declare class Basic extends Component<{}, IBasicState> {
     constructor(props: Readonly<{}>);
     render(): JSX.Element;
 }
-declare const _default: typeof Basic & import("react-dnd").ContextComponent<any>;
-export default _default;
+export default Basic;
