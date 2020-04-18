@@ -43,11 +43,11 @@
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dnd": "^10.0.2",
-    "react-dnd-html5-backend": "^10.0.2",
     "react-dom": "^16.8.6",
-    "rrule": "^2.6.0"
-  },
+    "rrule": "^2.6.0",
+    "react-dnd": "7",
+    "react-dnd-html5-backend": "7"
+  },  
   "devDependencies": {
     "@types/moment": "^2.13.0",
     "@types/node": "^12.6.8",
