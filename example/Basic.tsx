@@ -1,7 +1,7 @@
 import * as moment from 'moment';
 import * as React from 'react';
 import { Component } from 'react';
-import Scheduler, { SchedulerData, SchedulerViewTypes } from '../src/Scheduler';
+import Scheduler, { SchedulerData, SchedulerViewTypes } from '../src/';
 import { DemoData } from './utils/DemoData';
 import * as ExampleFunction from './utils/ExampleFunctions';
 import Nav from './utils/Nav';

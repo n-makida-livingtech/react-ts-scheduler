@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Component } from 'react';
-import { SchedulerData, RowHeaderProps } from './Scheduler';
+import { SchedulerData, RowHeaderProps } from '.';
 
 interface ResourceViewProps {
   schedulerData: SchedulerData;

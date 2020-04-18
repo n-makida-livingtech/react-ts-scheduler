@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Component, CSSProperties } from 'react';
-import { SchedulerData, ColumnHeaderProps } from './Scheduler';
+import { SchedulerData, ColumnHeaderProps } from '.';
 
 interface HeaderViewProps {
   schedulerData: SchedulerData;

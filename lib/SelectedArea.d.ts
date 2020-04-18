@@ -1,5 +1,5 @@
-import { Component } from "react";
-import { SchedulerData } from "./Scheduler";
+import { Component } from 'react';
+import { SchedulerData } from '.';
 interface SelectedAreaProps {
     schedulerData: SchedulerData;
     left: number;

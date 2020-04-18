@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { CSSProperties } from 'react';
 import Icon from 'antd/lib/icon';
-import { RowHeaderProps } from '../../src/Scheduler';
+import { RowHeaderProps } from '../../src/';
 
 export const RowHeaderComponent: React.FC<RowHeaderProps> = (props) => {
   const { item, schedulerData } = props;

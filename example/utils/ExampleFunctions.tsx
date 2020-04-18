@@ -12,7 +12,7 @@ import {
   UpdateEventStartArgs,
   EventActionFuncArgs,
   OnSelectDateArgs,
-} from '../../src/Scheduler';
+} from '../../src/';
 import { DemoData } from './DemoData';
 
 export function updateSchedulerDataState(sd?: SchedulerData) {

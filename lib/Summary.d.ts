@@ -1,5 +1,5 @@
-import { Component, ReactNode } from "react";
-import { SchedulerData } from "./Scheduler";
+import { Component, ReactNode } from 'react';
+import { SchedulerData } from '.';
 interface SummaryProps {
     schedulerData: SchedulerData;
     summary: Summary;

@@ -2,7 +2,7 @@ import { DragSource, DragSourceMonitor } from 'react-dnd';
 import * as moment from 'moment';
 import { DnDTypes } from './types/DnDTypes';
 import { ViewTypes } from './types/ViewTypes';
-import { SchedulerData, MoveEventArgs, NewEventArgs, ConflictOccurredArgs } from './Scheduler';
+import { SchedulerData, MoveEventArgs, NewEventArgs, ConflictOccurredArgs } from '.';
 import ResourceEvents from './ResourceEvents';
 import { Event } from './SchedulerData';
 

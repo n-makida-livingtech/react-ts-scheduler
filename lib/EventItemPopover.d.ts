@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Component } from "react";
-import { EventItemPopoverProps } from "./Scheduler";
+import * as React from 'react';
+import { Component } from 'react';
+import { EventItemPopoverProps } from '.';
 declare class EventItemPopover extends Component<EventItemPopoverProps & {
     PopoverFC?: React.FC<EventItemPopoverProps>;
 }> {

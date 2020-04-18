@@ -36,16 +36,6 @@ async function build() {
     process.stdout.write('Copying library style definitions... \n');
     await exec(`cp -R ${sourceDir}/css/ ${cssTarget}`);
 
-    // append lib/index.js with line importing antd-hack
-    const linesToBeAdded = [
-      '',
-      '',
-      '// this line has been added by scripts/build.js',
-      "require('./Scheduler.js');",
-      '',
-    ];
-    await appendFile(`${targetDir}/index.js`, linesToBeAdded.join('\n'));
-
     process.stdout.write('Success! \n');
   } catch (e) {
     process.stderr.write(e);

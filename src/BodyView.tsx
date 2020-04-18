@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as moment from 'moment';
 import { Component, CSSProperties } from 'react';
-import { SchedulerData } from './Scheduler';
+import { SchedulerData } from '.';
 
 interface BodyViewProps {
   schedulerData: SchedulerData;

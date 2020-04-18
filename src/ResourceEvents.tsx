@@ -8,14 +8,7 @@ import { CellUnits } from './types/CellUnits';
 import { SummaryPos } from './types/SummaryPos';
 import { getPos } from './Util';
 import { DnDTypes } from './types/DnDTypes';
-import {
-  SchedulerData,
-  NewEventArgs,
-  ConflictOccurredArgs,
-  MoveEventArgs,
-  MovingEventArgs,
-  NewStockArgs,
-} from './Scheduler';
+import { SchedulerData, NewEventArgs, ConflictOccurredArgs, MoveEventArgs, MovingEventArgs, NewStockArgs } from '.';
 import { RowRenderData, Header } from './SchedulerData';
 import DnDSource from './DnDSource';
 

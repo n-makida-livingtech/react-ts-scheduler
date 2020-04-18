@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Component } from "react";
-import { SchedulerData, EventItemProps, EventProps } from "./Scheduler";
-import { Event } from "./SchedulerData";
+import * as React from 'react';
+import { Component } from 'react';
+import { SchedulerData, EventItemProps, EventProps } from '.';
+import { Event } from './SchedulerData';
 interface EventItemState {
     left: number;
     top: number;

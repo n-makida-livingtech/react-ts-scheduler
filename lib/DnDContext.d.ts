@@ -1,6 +1,6 @@
 import { DnDTypes } from './types/DnDTypes';
 import * as moment from 'moment';
-import { SchedulerData } from './Scheduler';
+import { SchedulerData } from '.';
 import ResourceEvents from './ResourceEvents';
 import { Identifier } from 'dnd-core';
 import { Event } from './SchedulerData';

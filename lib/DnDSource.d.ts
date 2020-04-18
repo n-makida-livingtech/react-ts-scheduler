@@ -1,6 +1,6 @@
 import { DragSourceMonitor } from 'react-dnd';
 import { DnDTypes } from './types/DnDTypes';
-import { SchedulerData, MoveEventArgs, NewEventArgs, ConflictOccurredArgs } from './Scheduler';
+import { SchedulerData, MoveEventArgs, NewEventArgs, ConflictOccurredArgs } from '.';
 import ResourceEvents from './ResourceEvents';
 export default class DnDSource {
     resolveDragObjFunc: (props: any) => any;

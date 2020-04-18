@@ -1,7 +1,7 @@
-import * as moment from "moment";
-import { CellUnits } from "./types/CellUnits";
-import { SchedulerData } from "./Scheduler";
-import { Event } from "./SchedulerData";
+import * as moment from 'moment';
+import { CellUnits } from './types/CellUnits';
+import { SchedulerData } from '.';
+import { Event } from './SchedulerData';
 export declare const getSummary: (schedulerData: SchedulerData, headerEvents: Event[], slotId: string, slotName: string, headerStart: any, headerEnd: any) => {
     text: string;
     color: string;

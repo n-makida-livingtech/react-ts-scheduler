@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { SchedulerData, NewEventArgs, ConflictOccurredArgs, MoveEventArgs, MovingEventArgs, NewStockArgs } from './Scheduler';
+import { SchedulerData, NewEventArgs, ConflictOccurredArgs, MoveEventArgs, MovingEventArgs, NewStockArgs } from '.';
 import { Header } from './SchedulerData';
 import DnDSource from './DnDSource';
 interface ResourceEventsProps {

@@ -4,22 +4,16 @@
   "description": "A React Typescript component for scheduling and made for modern browsers (IE10+).",
   "keywords": [],
   "files": [
-    "lib/",
+    "lib",
     "LICENSE",
     "README.md",
     "CHANGELOG.md"
   ],
-  "main": "lib/index",
-  "homepage": "https://github.com/graspea/react-typescript-scheduler",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "",
+  "page": "https://github.com/graspea/react-typescript-scheduler",
   "author": "",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:graspea/react-typescript-scheduler.git"
-  },
-  "bugs": {
-    "url": "https://github.com/graspea/react-typescript-scheduler/issues"
-  },
-  "license": "MIT",
   "config": {},
   "scripts": {
     "debug": "webpack-dev-server --config ./webpack-dev.config.js --hot --open",
@@ -47,7 +41,7 @@
     "rrule": "^2.6.0",
     "react-dnd": "7",
     "react-dnd-html5-backend": "7"
-  },  
+  },
   "devDependencies": {
     "@types/moment": "^2.13.0",
     "@types/node": "^12.6.8",
