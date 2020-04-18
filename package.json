@@ -1,15 +1,8 @@
 {
-  "name": "react-big-scheduler",
+  "name": "now-ts-scheduler",
   "version": "0.2.7",
   "description": "A React Typescript component for scheduling and made for modern browsers (IE10+).",
-  "keywords": [
-    "scheduler",
-    "react-component",
-    "react",
-    "react-big-scheduler",
-    "resource planning",
-    "typescript"
-  ],
+  "keywords": [],
   "files": [
     "lib/",
     "LICENSE",
@@ -18,7 +11,7 @@
   ],
   "main": "lib/index",
   "homepage": "https://github.com/graspea/react-typescript-scheduler",
-  "author": "Graspea (https://github.com/graspea),Stephen Chou <27788280@qq.com> (https://github.com/StephenChou1017)",
+  "author": "",
   "repository": {
     "type": "git",
     "url": "git@github.com:graspea/react-typescript-scheduler.git"
@@ -32,7 +25,7 @@
     "debug": "webpack-dev-server --config ./webpack-dev.config.js --hot --open",
     "build-dev": "webpack --config ./webpack-dev.config.js",
     "clean": "rimraf ./lib && mkdir lib",
-    "build": "tsc",
+    "build": "node ./scripts/build.js",
     "clean:exampledist": "rimraf ./exampledist/static",
     "build:exampledist": "npm run clean:exampledist && cpy src/css/style.css exampledist/static && cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js",
     "example": "webpack-dev-server --config ./webpack/webpack-dev.config.js --hot",
