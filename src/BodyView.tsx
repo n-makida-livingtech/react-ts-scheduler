@@ -16,8 +16,6 @@ class BodyView extends Component<BodyViewProps> {
     const { schedulerData } = this.props;
     const { renderData, headers, config, behaviors, stocks } = schedulerData;
 
-    console.log(stocks);
-    console.log(stocks);
     const cellWidth = schedulerData.getContentCellWidth();
     const displayRenderData = renderData.filter((o) => o.render);
     const tableRows = displayRenderData.map((item) => {
