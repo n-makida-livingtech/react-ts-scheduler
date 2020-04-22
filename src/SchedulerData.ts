@@ -1193,10 +1193,10 @@ export default class SchedulerData {
               : resourceEvents.rowMaxCount;
           const newRowHeight =
             (rowsCount + 1) * this.config.eventItemLineHeight +
-            (this.config.creatable && this.config.checkConflict === false ? 20 : 2);
-          if (newRowHeight > resourceEvents.rowHeight) {
-            resourceEvents.rowHeight = newRowHeight;
-          }
+            (this.config.creatable && this.config.checkConflict === false ? 2 : 2);
+          // if (newRowHeight > resourceEvents.rowHeight) {
+          //   resourceEvents.rowHeight = newRowHeight;
+          // }
         }
       });
     }
