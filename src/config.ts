@@ -44,7 +44,7 @@ export let Config = {
   summaryColor: '#666',
   summaryPos: SummaryPos.TopRight,
   groupOnlySlotColor: '#F8F8F8',
-  stockBodyBgColor: '#e9e9e9',
+  stockBodyBgColor: 'red',
 
   startResizable: true,
   endResizable: true,

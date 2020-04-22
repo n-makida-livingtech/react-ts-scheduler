@@ -25,7 +25,18 @@ class Basic extends Component<{}, IBasicState> {
     const schedulerData = new SchedulerData(
       ExampleFunction.updateSchedulerDataState.bind(this),
       ExampleFunction.getNow(),
-      SchedulerViewTypes.Year
+      SchedulerViewTypes.Year,
+      false,
+      false,
+      {
+        crossResourceMove: false,
+        eventItemHeight: 22,
+        eventItemLineHeight: 24,
+
+        nonWorkingTimeHeadColor: '#000000',
+        nonWorkingTimeHeadBgColor: '#FFFFFF',
+        nonWorkingTimeBodyBgColor: '#FFFFFF',
+      }
     );
     // To set locale
     moment.locale('ja-JP');
