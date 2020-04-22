@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Component } from 'react';
-import { SchedulerData, EventItemProps, EventProps } from '.';
+import { SchedulerData, EventItemProps, EventProps } from './';
 import { Event } from './SchedulerData';
 interface EventItemState {
     left: number;
