@@ -3,9 +3,10 @@ import { SummaryPos } from './types/SummaryPos';
 
 export let Config = {
   schedulerWidth: '100%',
-  besidesWidth: 20,
+  besidesWidth: 100,
   schedulerMaxHeight: 0,
-  tableHeaderHeight: 40,
+  tableHeaderHeight: 80,
+  defaultResourceHeight: 148,
 
   agendaResourceTableWidth: 160,
   agendaMaxEventWidth: 100,
@@ -44,7 +45,7 @@ export let Config = {
   summaryColor: '#666',
   summaryPos: SummaryPos.TopRight,
   groupOnlySlotColor: '#F8F8F8',
-  stockBodyBgColor: 'red',
+  stockBodyBgColor: '#F8F8F8',
 
   startResizable: true,
   endResizable: true,

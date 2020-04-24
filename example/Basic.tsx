@@ -16,7 +16,7 @@ import { ColumnHeaderComponent } from './plugins/ColumnHeader';
 
 interface IBasicState {
   viewModel: SchedulerData;
-  update: moment.Moment;
+  // update: moment.Moment;
 }
 
 class Basic extends Component<{}, IBasicState> {
@@ -46,7 +46,7 @@ class Basic extends Component<{}, IBasicState> {
     schedulerData.setStocks(DemoData.stocks);
     this.state = {
       viewModel: schedulerData,
-      update: ExampleFunction.getNow(),
+      // update: ExampleFunction.getNow(),
     };
   }
 

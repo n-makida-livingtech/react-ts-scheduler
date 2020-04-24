@@ -27,7 +27,10 @@ class BodyView extends Component<BodyViewProps> {
         };
 
         const stockCss: CSSProperties = {
-          height: item.rowHeight - 10,
+          height:
+            item.rowHeight > config.defaultResourceHeight - 20
+              ? item.rowHeight - 20
+              : config.defaultResourceHeight - 20,
         };
 
         if (!!header.nonWorkingTime) {
@@ -48,7 +51,7 @@ class BodyView extends Component<BodyViewProps> {
         );
       });
       const cssParent: CSSProperties = {
-        height: item.rowHeight,
+        height: item.rowHeight > config.defaultResourceHeight ? item.rowHeight : config.defaultResourceHeight,
       };
       return (
         <tr key={item.slotId} style={cssParent}>
