@@ -5,6 +5,7 @@ export declare let Config: {
     besidesWidth: number;
     schedulerMaxHeight: number;
     tableHeaderHeight: number;
+    defaultResourceHeight: number;
     agendaResourceTableWidth: number;
     agendaMaxEventWidth: number;
     dayResourceTableWidth: number;

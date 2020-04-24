@@ -46,6 +46,7 @@ export interface ColumnHeaderProps {
     header: Header;
     headersCount: number;
     schedulerData: SchedulerData;
+    width?: number;
     index: number;
 }
 export interface RowHeaderProps {
