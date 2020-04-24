@@ -16,8 +16,6 @@ class BodyView extends Component<BodyViewProps> {
     const { schedulerData } = this.props;
     const { renderData, headers, config, behaviors, stocks } = schedulerData;
 
-    console.log(stocks);
-    console.log(stocks);
     const cellWidth = schedulerData.getContentCellWidth();
     const displayRenderData = renderData.filter((o) => o.render);
     const tableRows = displayRenderData.map((item) => {
@@ -29,7 +27,10 @@ class BodyView extends Component<BodyViewProps> {
         };
 
         const stockCss: CSSProperties = {
-          height: item.rowHeight - 10,
+          height:
+            item.rowHeight > config.defaultResourceHeight - 20
+              ? item.rowHeight - 20
+              : config.defaultResourceHeight - 20,
         };
 
         if (!!header.nonWorkingTime) {
@@ -50,7 +51,7 @@ class BodyView extends Component<BodyViewProps> {
         );
       });
       const cssParent: CSSProperties = {
-        height: item.rowHeight,
+        height: item.rowHeight > config.defaultResourceHeight ? item.rowHeight : config.defaultResourceHeight,
       };
       return (
         <tr key={item.slotId} style={cssParent}>

@@ -10,8 +10,6 @@ export const RowHeaderComponent: React.FC<RowHeaderProps> = (props) => {
     indents.push(<span key={`es${i}`} className='expander-space'></span>);
   }
 
-  console.log(item);
-
   let indent = <span key={`es${item.indent}`} className='expander-space'></span>;
   if (item.hasChildren) {
     indent = item.expanded ? (
@@ -51,7 +49,10 @@ export const RowHeaderComponent: React.FC<RowHeaderProps> = (props) => {
         <div title={item.slotName} className='overflow-text header2-text' style={{ textAlign: 'left' }}>
           <span className='slot-cell'>
             {indents}
-            {/* <img src={item.thumbnailImagePath} /> */}
+            <img
+              src={item.thumbnailImagePath}
+              style={{ height: '100px', margin: '24px 12px 24px 0px', borderRadius: '20px' }}
+            />
             <a
               className='slot-text'
               onClick={() => {

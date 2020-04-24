@@ -16,7 +16,7 @@ import { ColumnHeaderComponent } from './plugins/ColumnHeader';
 
 interface IBasicState {
   viewModel: SchedulerData;
-  update: moment.Moment;
+  // update: moment.Moment;
 }
 
 class Basic extends Component<{}, IBasicState> {
@@ -25,7 +25,18 @@ class Basic extends Component<{}, IBasicState> {
     const schedulerData = new SchedulerData(
       ExampleFunction.updateSchedulerDataState.bind(this),
       ExampleFunction.getNow(),
-      SchedulerViewTypes.Year
+      SchedulerViewTypes.Year,
+      false,
+      false,
+      {
+        crossResourceMove: false,
+        eventItemHeight: 22,
+        eventItemLineHeight: 24,
+
+        nonWorkingTimeHeadColor: '#000000',
+        nonWorkingTimeHeadBgColor: '#FFFFFF',
+        nonWorkingTimeBodyBgColor: '#FFFFFF',
+      }
     );
     // To set locale
     moment.locale('ja-JP');
@@ -35,7 +46,7 @@ class Basic extends Component<{}, IBasicState> {
     schedulerData.setStocks(DemoData.stocks);
     this.state = {
       viewModel: schedulerData,
-      update: ExampleFunction.getNow(),
+      // update: ExampleFunction.getNow(),
     };
   }
 

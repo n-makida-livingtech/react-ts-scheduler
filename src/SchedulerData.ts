@@ -491,6 +491,7 @@ export default class SchedulerData {
       dateLabel = this.behaviors.getDateLabelFunc(this, this.viewType, this.startDate, this.endDate);
     }
 
+    console.log('dateLabel' + dateLabel);
     return dateLabel;
   }
 
@@ -715,7 +716,7 @@ export default class SchedulerData {
     if (date != undefined) {
       this.selectDate = moment(date);
     }
-    this.selectDate = moment('2017-12-18');
+    this.selectDate = moment();
 
     if (this.viewType === ViewTypes.Week) {
       this.startDate = date != undefined ? moment(date).startOf('week') : moment(this.startDate).add(num, 'weeks');
@@ -1103,7 +1104,7 @@ export default class SchedulerData {
                   : resourceEvents.rowMaxCount;
               const newRowHeight =
                 rowsCount * this.config.eventItemLineHeight +
-                (this.config.creatable && this.config.checkConflict === false ? 20 : 2);
+                (this.config.creatable && this.config.checkConflict === false ? config.defaultResourceHeight : 2);
               if (newRowHeight > resourceEvents.rowHeight) {
                 resourceEvents.rowHeight = newRowHeight;
               }
@@ -1193,7 +1194,7 @@ export default class SchedulerData {
               : resourceEvents.rowMaxCount;
           const newRowHeight =
             (rowsCount + 1) * this.config.eventItemLineHeight +
-            (this.config.creatable && this.config.checkConflict === false ? 20 : 2);
+            (this.config.creatable && this.config.checkConflict === false ? config.defaultResourceHeight : 2);
           if (newRowHeight > resourceEvents.rowHeight) {
             resourceEvents.rowHeight = newRowHeight;
           }

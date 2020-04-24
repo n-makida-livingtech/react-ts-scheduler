@@ -4,7 +4,7 @@ import { Component } from 'react';
 import EventItemPopover from './EventItemPopover';
 import { CellUnits } from './types/CellUnits';
 import { DnDTypes } from './types/DnDTypes';
-import { SchedulerData, EventItemProps, EventProps } from '.';
+import { SchedulerData, EventItemProps, EventProps } from './';
 import { Event } from './SchedulerData';
 
 const supportTouch = 'ontouchstart' in window;

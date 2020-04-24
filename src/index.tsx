@@ -90,6 +90,7 @@ export interface ColumnHeaderProps {
   header: Header;
   headersCount: number;
   schedulerData: SchedulerData;
+  width?: number;
   index: number;
 }
 export interface RowHeaderProps {
@@ -433,7 +434,7 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
               </div>
             </div>
           </td>
-          <td>
+          <td style={{ height: '100%' }}>
             <div className='scheduler-view' style={{ width: schedulerContainerWidth, verticalAlign: 'top' }}>
               <div style={{ overflow: 'hidden', borderBottom: '1px solid #e9e9e9', height: config.tableHeaderHeight }}>
                 <div
@@ -486,38 +487,60 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
         <Calendar fullscreen={false} onSelect={this.onSelect} />
       </div>
     );
+
+    let currentYear: number = Number(schedulerData.startDate.format('Y'));
+
     let schedulerHeader = <div />;
     if (config.headerEnabled) {
       schedulerHeader = (
-        <Row type='flex' align='middle' justify='space-between' style={{ marginBottom: '24px' }}>
-          {leftCustomHeader}
-          <Col>
-            <div className='header2-text'>
-              <Icon type='left' style={{ marginRight: '8px' }} className='icon-nav' onClick={this.goBack} />
-              {calendarPopoverEnabled ? (
-                <Popover
-                  content={popover}
-                  placement='bottom'
-                  trigger='click'
-                  visible={this.state.visible}
-                  onVisibleChange={this.handleVisibleChange}>
-                  <span className={'header2-text-label'} style={{ cursor: 'pointer' }}>
-                    {dateLabel}
-                  </span>
-                </Popover>
-              ) : (
-                <span className={'header2-text-label'}>{dateLabel}</span>
-              )}
-              <Icon type='right' style={{ marginLeft: '8px' }} className='icon-nav' onClick={this.goNext} />
-            </div>
-          </Col>
-          <Col>
-            <RadioGroup defaultValue={defaultValue} size='default' onChange={this.onViewChange}>
-              {radioButtonList}
-            </RadioGroup>
-          </Col>
-          {rightCustomHeader}
-        </Row>
+        <>
+          <Row type='flex' align='middle' justify='space-between' style={{ marginBottom: '24px' }}>
+            {leftCustomHeader}
+
+            <Col>
+              <RadioGroup defaultValue={defaultValue} size='default' onChange={this.onViewChange}>
+                {radioButtonList}
+              </RadioGroup>
+            </Col>
+            {rightCustomHeader}
+          </Row>
+          <Row
+            type='flex'
+            align='middle'
+            justify='space-between'
+            style={{ marginBottom: '24px', border: '1px solid black', padding: '12px 8px' }}>
+            {leftCustomHeader}
+            <Col style={{ width: '100%', display: 'flex' }}>
+              <div className='header2-text' style={{ width: '100%', display: 'flex' }} onClick={this.goBack}>
+                <div style={{ width: 'calc(100% / 3)', textAlign: 'left' }}>
+                  <Icon type='left' className='icon-nav' style={{ marginRight: '8px' }} />
+                  {currentYear - 1}
+                </div>
+                <div style={{ width: 'calc(100% / 3)', textAlign: 'center' }}>
+                  {calendarPopoverEnabled ? (
+                    <Popover
+                      content={popover}
+                      placement='bottom'
+                      trigger='click'
+                      visible={this.state.visible}
+                      onVisibleChange={this.handleVisibleChange}>
+                      <span className={'header2-text-label'} style={{ cursor: 'pointer' }}>
+                        {dateLabel}
+                      </span>
+                    </Popover>
+                  ) : (
+                    <span className={'header2-text-label'}>{dateLabel}</span>
+                  )}
+                </div>
+                <div style={{ width: 'calc(100% / 3)', textAlign: 'right' }} onClick={this.goNext}>
+                  {currentYear + 1}
+                  <Icon type='right' className='icon-nav' style={{ marginLeft: '8px' }} />
+                </div>
+              </div>
+            </Col>
+            {rightCustomHeader}
+          </Row>
+        </>
       );
     }
 

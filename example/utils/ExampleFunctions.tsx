@@ -15,6 +15,8 @@ import {
 } from '../../src/';
 import { DemoData } from './DemoData';
 
+const now = moment(new Date());
+
 export function updateSchedulerDataState(sd?: SchedulerData) {
   this.setState({
     viewModel: sd ? sd : this.viewModel,
@@ -23,7 +25,8 @@ export function updateSchedulerDataState(sd?: SchedulerData) {
 }
 
 export const getNow = (): moment.Moment => {
-  return moment();
+  console.log('now' + now.format('Y-MM-DD'));
+  return now;
 };
 
 export function prevClick(schedulerData: SchedulerData) {
@@ -146,7 +149,9 @@ export function moveEvent(args: MoveEventArgs) {
 export function newStock(args: NewStockArgs) {
   if (
     confirm(
-      `Do you want to create a new event? {slotId: ${args.slotId}, slotName: ${args.slotName}, start: ${args.start}, end: ${args.end}, type: ${args.type}, item: ${args.item}}`
+      `Do you want to create a new stock? {slotId: ${args.slotId}, slotName: ${args.slotName}, start: ${moment(
+        args.start
+      ).format('Y-MM-DD')}, end: ${moment(args.end).format('Y-MM-DD')}, type: ${args.type}, item: ${args.item}}`
     )
   ) {
     // add Stock
