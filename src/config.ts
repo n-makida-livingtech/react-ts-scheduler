@@ -22,7 +22,7 @@ export let Config = {
   weekCellWidth: '12%',
   monthCellWidth: 80,
   quarterCellWidth: 80,
-  yearCellWidth: 2,
+  yearCellWidth: 4,
   customCellWidth: 80,
 
   dayMaxEvents: 99,
@@ -37,6 +37,8 @@ export let Config = {
   nonAgendaSlotMinHeight: 0,
   dayStartFrom: 0,
   dayStopTo: 23,
+
+  baseColor: 'white',
   defaultEventBgColor: '#80C5F6',
   selectedAreaColor: '#7EC2F3',
   nonWorkingTimeHeadColor: '#999999',

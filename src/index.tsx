@@ -410,7 +410,7 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
       const resourceName = schedulerData.isEventPerspective ? config.taskName : config.resourceName;
       tbodyContent = (
         <tr>
-          <td style={{ width: resourceTableWidth, verticalAlign: 'top' }}>
+          <td style={{ width: resourceTableWidth, verticalAlign: 'top', backgroundColor: config.baseColor }}>
             <div className='resource-view'>
               <div style={{ overflow: 'hidden', borderBottom: '1px solid #e9e9e9', height: config.tableHeaderHeight }}>
                 <div
@@ -434,7 +434,7 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
               </div>
             </div>
           </td>
-          <td style={{ height: '100%' }}>
+          <td style={{ height: '100%', backgroundColor: config.baseColor }}>
             <div className='scheduler-view' style={{ width: schedulerContainerWidth, verticalAlign: 'top' }}>
               <div style={{ overflow: 'hidden', borderBottom: '1px solid #e9e9e9', height: config.tableHeaderHeight }}>
                 <div
@@ -508,7 +508,12 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
             type='flex'
             align='middle'
             justify='space-between'
-            style={{ marginBottom: '24px', border: '1px solid black', padding: '12px 8px' }}>
+            style={{
+              marginBottom: '24px',
+              border: '1px solid black',
+              padding: '12px 8px',
+              backgroundColor: config.baseColor,
+            }}>
             {leftCustomHeader}
             <Col style={{ width: '100%', display: 'flex' }}>
               <div className='header2-text' style={{ width: '100%', display: 'flex' }} onClick={this.goBack}>
