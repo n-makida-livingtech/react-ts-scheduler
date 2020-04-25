@@ -31,6 +31,7 @@ export declare let Config: {
     nonAgendaSlotMinHeight: number;
     dayStartFrom: number;
     dayStopTo: number;
+    baseColor: string;
     defaultEventBgColor: string;
     selectedAreaColor: string;
     nonWorkingTimeHeadColor: string;

@@ -725,6 +725,7 @@ const data: DemoData = {
       type: 3,
     },
   ],
+  eventsForTaskView: [],
 };
 
 export const DemoData = data;
