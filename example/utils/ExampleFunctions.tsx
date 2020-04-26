@@ -39,6 +39,7 @@ export function prevClick(schedulerData: SchedulerData) {
 
 export function nextClick(schedulerData: SchedulerData) {
   schedulerData.next();
+  console.log(schedulerData);
   schedulerData.setEvents(DemoData.events);
   this.setState({
     viewModel: schedulerData,

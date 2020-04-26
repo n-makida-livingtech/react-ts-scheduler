@@ -732,8 +732,12 @@ export default class SchedulerData {
         date != undefined ? moment(date).startOf('quarter') : moment(this.startDate).add(num, 'quarters');
       this.endDate = moment(this.startDate).endOf('quarter');
     } else if (this.viewType === ViewTypes.Year) {
-      this.startDate = date != undefined ? moment(date).startOf('year') : moment(this.startDate).add(num, 'years');
+      this.startDate = date != undefined ? moment(date).startOf('year') : moment(this.startDate).add(num, 'year');
       this.endDate = moment(this.startDate).endOf('year');
+
+      console.log(num);
+      console.log(this.startDate.format('Y'));
+      console.log(this.endDate.format('Y'));
     } else if (
       this.viewType === ViewTypes.Custom ||
       this.viewType === ViewTypes.Custom1 ||

@@ -10,6 +10,7 @@ export const PopoverComponent: React.FC<EventItemPopoverProps> = (props) => {
   const { connectDragSource, connectDragPreview, timelineEvent, startTime, endTime, schedulerData, eventItem } = props;
   const { config } = schedulerData;
   let bgColor = config.defaultEventBgColor;
+  console.log('sljdadjaljdla');
   if (eventItem.bgColor) {
     bgColor = eventItem.bgColor;
   }
