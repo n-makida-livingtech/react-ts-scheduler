@@ -14,6 +14,9 @@ export const ColumnHeaderComponent: React.FC<ColumnHeaderProps> = (props) => {
   const currentDateStyle: CSSProperties = {
     backgroundColor: '#118dea',
     color: 'white',
+    verticalAlign: 'middle',
+    boxSizing: 'border-box',
+    padding: '10px',
   };
 
   if (cellUnit === CellUnits.Hour) {
@@ -25,12 +28,20 @@ export const ColumnHeaderComponent: React.FC<ColumnHeaderProps> = (props) => {
             width: width ? width : cellWidth * minuteStepsInHour,
             color: config.nonWorkingTimeHeadColor,
             backgroundColor: config.nonWorkingTimeHeadBgColor,
+            verticalAlign: 'middle',
           }
-        : { width: width ? width : cellWidth * minuteStepsInHour };
+        : {
+            width: width ? width : cellWidth * minuteStepsInHour,
+            verticalAlign: 'middle',
+          };
 
       if (index === headersCount - minuteStepsInHour) {
         style = !!header.nonWorkingTime
-          ? { color: config.nonWorkingTimeHeadColor, backgroundColor: config.nonWorkingTimeHeadBgColor }
+          ? {
+              color: config.nonWorkingTimeHeadColor,
+              backgroundColor: config.nonWorkingTimeHeadBgColor,
+              verticalAlign: 'middle',
+            }
           : {};
       }
 
@@ -69,6 +80,7 @@ export const ColumnHeaderComponent: React.FC<ColumnHeaderProps> = (props) => {
       // Custom
       style.fontWeight = 'normal';
       style.color = 'black';
+
       const currentMonthStyle =
         moment(header.time).format('M') === moment().format('M')
           ? { backgroundColor: 'gray', borderRadius: 40, padding: '8px 0px', color: 'white' }
