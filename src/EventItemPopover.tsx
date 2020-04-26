@@ -9,6 +9,7 @@ class EventItemPopover extends Component<EventItemPopoverProps & { PopoverFC?: R
 
   public render() {
     const { PopoverFC } = this.props;
+
     if (PopoverFC) {
       return <PopoverFC {...this.props} />;
     } else {
