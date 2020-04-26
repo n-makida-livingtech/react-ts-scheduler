@@ -51,7 +51,7 @@ export const RowHeaderComponent: React.FC<RowHeaderProps> = (props) => {
             {indents}
             <img
               src={item.thumbnailImagePath}
-              style={{ height: '100px', margin: '24px 12px 24px 0px', borderRadius: '20px' }}
+              style={{ height: '100px', margin: '24px 12px 24px 0px', borderRadius: '20px', display: 'inline-block' }}
             />
             <a
               className='slot-text'

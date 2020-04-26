@@ -417,7 +417,10 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
                   style={{ overflowX: 'scroll', overflowY: 'hidden', margin: `0px 0px -${contentScrollbarHeight}px` }}>
                   <table className='resource-table'>
                     <thead>
-                      <tr style={{ height: config.tableHeaderHeight }}>
+                      <tr
+                        style={{
+                          height: config.tableHeaderHeight,
+                        }}>
                         <th className='header3-text'>{resourceName}</th>
                       </tr>
                     </thead>
@@ -510,7 +513,7 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
             justify='space-between'
             style={{
               marginBottom: '24px',
-              border: '1px solid black',
+              border: '1px solid #e9e9e9',
               padding: '12px 8px',
               backgroundColor: config.baseColor,
             }}>
