@@ -491,13 +491,7 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
       </div>
     );
 
-    let currentYear = schedulerData.startDate.format('Y');
-    let nextYear = moment(currentYear + '-01-01')
-      .add(1, 'year')
-      .format('Y');
-    let prevYear = moment(currentYear + '-01-01')
-      .add(-1, 'year')
-      .format('Y');
+    let currentYear: number = Number(schedulerData.startDate.format('Y'));
 
     let schedulerHeader = <div />;
     if (config.headerEnabled) {
@@ -525,31 +519,29 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
             }}>
             {leftCustomHeader}
             <Col style={{ width: '100%', display: 'flex' }}>
-              <div className='header2-text' style={{ width: 'calc(100% / 3)' }} onClick={this.goBack}>
-                <div style={{ textAlign: 'left' }}>
+              <div className='header2-text' style={{ width: '100%', display: 'flex' }} onClick={this.goBack}>
+                <div style={{ width: 'calc(100% / 3)', textAlign: 'left' }}>
                   <Icon type='left' className='icon-nav' style={{ marginRight: '8px' }} />
-                  {prevYear}
+                  {currentYear - 1}
                 </div>
-              </div>
-              <div style={{ width: 'calc(100% / 3)', textAlign: 'center' }}>
-                {calendarPopoverEnabled ? (
-                  <Popover
-                    content={popover}
-                    placement='bottom'
-                    trigger='click'
-                    visible={this.state.visible}
-                    onVisibleChange={this.handleVisibleChange}>
-                    <span className={'header2-text-label'} style={{ cursor: 'pointer' }}>
-                      {dateLabel}
-                    </span>
-                  </Popover>
-                ) : (
-                  <span className={'header2-text-label'}>{dateLabel}</span>
-                )}
-              </div>
-              <div className='header2-text' style={{ width: 'calc(100% / 3)' }} onClick={this.goNext}>
-                <div style={{ textAlign: 'right' }}>
-                  {nextYear}
+                <div style={{ width: 'calc(100% / 3)', textAlign: 'center' }}>
+                  {calendarPopoverEnabled ? (
+                    <Popover
+                      content={popover}
+                      placement='bottom'
+                      trigger='click'
+                      visible={this.state.visible}
+                      onVisibleChange={this.handleVisibleChange}>
+                      <span className={'header2-text-label'} style={{ cursor: 'pointer' }}>
+                        {dateLabel}
+                      </span>
+                    </Popover>
+                  ) : (
+                    <span className={'header2-text-label'}>{dateLabel}</span>
+                  )}
+                </div>
+                <div style={{ width: 'calc(100% / 3)', textAlign: 'right' }} onClick={this.goNext}>
+                  {currentYear + 1}
                   <Icon type='right' className='icon-nav' style={{ marginLeft: '8px' }} />
                 </div>
               </div>
