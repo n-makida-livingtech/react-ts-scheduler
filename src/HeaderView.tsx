@@ -36,8 +36,6 @@ class HeaderView extends Component<HeaderViewProps> {
         dateList.push(Moment(startYear + '-' + (1 + index) + '-1').daysInMonth() + sumDay);
         widthList.push(Moment(startYear + '-' + (1 + index) + '-1').daysInMonth() * 2);
       }
-
-      console.log(dateList);
       if (ColumnHeaderFC) {
         const count = 12;
         headerList = headers.map((header, index) => {
@@ -56,7 +54,6 @@ class HeaderView extends Component<HeaderViewProps> {
               />
             );
           }
-          // console.log(dayCache);
 
           return;
         });
@@ -77,8 +74,6 @@ class HeaderView extends Component<HeaderViewProps> {
         });
       }
     }
-
-    console.log(schedulerData);
 
     return (
       <thead>

@@ -55,6 +55,7 @@ class ResourceEvents extends Component<ResourceEventsProps, ResourceEventsState>
   public headerItems: Header[];
   public slotId: string;
   public slotName: string;
+  public basicStock: number;
   public hasSummary: boolean;
   public rowHeight: number;
 
@@ -231,12 +232,14 @@ class ResourceEvents extends Component<ResourceEventsProps, ResourceEventsState>
     });
     const start = moment(startTime);
     const end = moment(endTime);
+    const basicStock = resourceEvents.basicStock;
     let hasConflict = false;
     if (config.checkConflict) {
       events.forEach((e) => {
         if (schedulerData.getEventSlotId(e) === slotId) {
           const eStart = moment(e.start);
           const eEnd = moment(e.end);
+
           if (
             (start >= eStart && start < eEnd) ||
             (end > eStart && end <= eEnd) ||
@@ -274,7 +277,7 @@ class ResourceEvents extends Component<ResourceEventsProps, ResourceEventsState>
       }
     } else {
       if (newEvent != undefined) {
-        newStock({ schedulerData, slotId, slotName, start, end: endTime });
+        newStock({ schedulerData, slotId, slotName, start, end: endTime, stock: basicStock });
         // newEvent({ schedulerData, slotId, slotName, start, end: endTime });
       }
     }

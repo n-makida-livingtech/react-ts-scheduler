@@ -9,7 +9,6 @@ export const ColumnHeaderComponent: React.FC<ColumnHeaderProps> = (props) => {
   const { config, cellUnit } = schedulerData;
   const cellWidth = schedulerData.getContentCellWidth();
 
-  console.log(width);
   let style: CSSProperties = {};
   const currentDateStyle: CSSProperties = {
     backgroundColor: '#118dea',

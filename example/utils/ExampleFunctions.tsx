@@ -148,11 +148,14 @@ export function moveEvent(args: MoveEventArgs) {
 }
 
 export function newStock(args: NewStockArgs) {
+  console.log(args);
   if (
     confirm(
       `Do you want to create a new stock? {slotId: ${args.slotId}, slotName: ${args.slotName}, start: ${moment(
         args.start
-      ).format('Y-MM-DD')}, end: ${moment(args.end).format('Y-MM-DD')}, type: ${args.type}, item: ${args.item}}`
+      ).format('Y-MM-DD')}, end: ${moment(args.end).format('Y-MM-DD')}, type: ${args.type}, item: ${
+        args.item
+      }, stock: ${args.stock}}`
     )
   ) {
     // add Stock

@@ -11,6 +11,7 @@ export interface RowRenderData {
   slotId: string;
   slotName: string;
   thumbnailImagePath: string;
+  basicStock: number;
   parentId: string | undefined;
   groupOnly: boolean;
   hasSummary: boolean;
@@ -81,6 +82,7 @@ export interface Resource {
   id: string;
   name: string;
   thumbnailImagePath: string;
+  basicStock: number;
   parentId?: string;
 }
 
@@ -491,8 +493,6 @@ export default class SchedulerData {
     if (!!this.behaviors.getDateLabelFunc) {
       dateLabel = this.behaviors.getDateLabelFunc(this, this.viewType, this.startDate, this.endDate);
     }
-
-    console.log('dateLabel' + dateLabel);
     return dateLabel;
   }
 
@@ -735,10 +735,6 @@ export default class SchedulerData {
     } else if (this.viewType === ViewTypes.Year) {
       this.startDate = date != undefined ? moment(date).startOf('year') : moment(this.startDate).add(num, 'year');
       this.endDate = moment(this.startDate).endOf('year');
-
-      console.log(num);
-      console.log(this.startDate.format('Y'));
-      console.log(this.endDate.format('Y'));
     } else if (
       this.viewType === ViewTypes.Custom ||
       this.viewType === ViewTypes.Custom1 ||
@@ -897,6 +893,7 @@ export default class SchedulerData {
       const slotRenderData = {
         slotId: slot.id,
         thumbnailImagePath: slot.thumbnailImagePath,
+        basicStock: slot.basicStock,
         slotName: slot.name,
         parentId: slot.parentId,
         groupOnly: slot.groupOnly,

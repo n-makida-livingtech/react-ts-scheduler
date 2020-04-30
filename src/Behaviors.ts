@@ -58,7 +58,6 @@ export const getDateLabel = (
   const end = moment(endDate);
   let dateLabel = start.format('MMM D, YYYY');
 
-  console.log(start);
   if (
     viewType === ViewTypes.Week ||
     (start != end &&

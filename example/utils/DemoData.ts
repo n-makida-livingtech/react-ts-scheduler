@@ -72,6 +72,7 @@ const data: DemoData = {
       name: '[検証用物件A]-予約リクエスト',
       thumbnailImagePath: 'https://news.walkerplus.com/article/205022/1259248_615.jpg',
       //   groupOnly: true,
+      basicStock: 9,
     },
     // {
     //   id: 'r1',
@@ -92,6 +93,7 @@ const data: DemoData = {
       id: 'a4ad3df8-53c4-4b68-b880-79c816cc6097',
       name: '鹿児島のシェアハウス',
       thumbnailImagePath: 'https://news.walkerplus.com/article/205022/1259248_615.jpg',
+      basicStock: 2,
     },
     // {
     //   id: 'r5',
