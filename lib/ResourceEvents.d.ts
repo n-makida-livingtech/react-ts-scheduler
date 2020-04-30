@@ -31,6 +31,7 @@ declare class ResourceEvents extends Component<ResourceEventsProps, ResourceEven
     headerItems: Header[];
     slotId: string;
     slotName: string;
+    basicStock: number;
     hasSummary: boolean;
     rowHeight: number;
     constructor(props: Readonly<ResourceEventsProps>);

@@ -7,6 +7,7 @@ export interface RowRenderData {
     slotId: string;
     slotName: string;
     thumbnailImagePath: string;
+    basicStock: number;
     parentId: string | undefined;
     groupOnly: boolean;
     hasSummary: boolean;
@@ -72,6 +73,7 @@ export interface Resource {
     id: string;
     name: string;
     thumbnailImagePath: string;
+    basicStock: number;
     parentId?: string;
 }
 export default class SchedulerData {
