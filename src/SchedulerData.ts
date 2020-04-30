@@ -64,7 +64,6 @@ export interface Event {
   endResizable?: boolean;
   showPopover?: boolean;
   movable?: boolean;
-  data?: any;
 }
 
 export interface EventRecurring {
@@ -904,8 +903,8 @@ export default class SchedulerData {
         rowMaxCount: 0,
         rowHeight:
           this.config.nonAgendaSlotMinHeight !== 0
-            ? this.config.nonAgendaSlotMinHeight
-            : this.config.eventItemLineHeight + 2,
+            ? this.config.nonAgendaSlotMinHeight + config.defaultResourceHeight
+            : this.config.eventItemLineHeight + 2 + config.defaultResourceHeight,
         headerItems: headerEvents,
         indent: 0,
         hasChildren: false,
@@ -1096,6 +1095,7 @@ export default class SchedulerData {
         const eventEnd = moment(item.end);
         let pos = -1;
 
+        resourceEvents.rowHeight = config.defaultResourceHeight;
         resourceEvents.headerItems.forEach((header, index) => {
           const headerStart = moment(header.start);
           const headerEnd = moment(header.end);
@@ -1109,7 +1109,7 @@ export default class SchedulerData {
                   : resourceEvents.rowMaxCount;
               const newRowHeight =
                 rowsCount * this.config.eventItemLineHeight +
-                (this.config.creatable && this.config.checkConflict === false ? config.defaultResourceHeight : 2);
+                (this.config.creatable && this.config.checkConflict === false ? 0 : 2);
               if (newRowHeight > resourceEvents.rowHeight) {
                 resourceEvents.rowHeight = newRowHeight;
               }
@@ -1199,7 +1199,7 @@ export default class SchedulerData {
               : resourceEvents.rowMaxCount;
           const newRowHeight =
             (rowsCount + 1) * this.config.eventItemLineHeight +
-            (this.config.creatable && this.config.checkConflict === false ? config.defaultResourceHeight : 2);
+            (this.config.creatable && this.config.checkConflict === false ? 0 : 2);
           if (newRowHeight > resourceEvents.rowHeight) {
             resourceEvents.rowHeight = newRowHeight;
           }

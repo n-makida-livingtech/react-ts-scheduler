@@ -149,7 +149,7 @@ const data: DemoData = {
   events: [
     {
       id: '344ba8da-e6de-4895-a9a5-03e57570fd1c',
-      resourceId: '11f4d6da-e866-41ad-9c6d-5dae74950c2a',
+      resourceId: 's11f4d6da-e866-41ad-9c6d-5dae74950c2a',
       title: '[検証用物件A]-予約リクエスト',
       start: moment('2020-05-31T06:00:00.000Z'),
       end: moment('2020-07-10T01:00:00.000Z'),
@@ -158,7 +158,7 @@ const data: DemoData = {
     },
     {
       id: 'c1a1f2cd-17cd-4616-a6ed-95dd0af7891c',
-      resourceId: '11f4d6da-e866-41ad-9c6d-5dae74950c2a',
+      resourceId: 's11f4d6da-e866-41ad-9c6d-5dae74950c2a',
       title: '[検証用物件A]-予約リクエスト',
       start: moment('2020-05-31T06:00:00.000Z'),
       end: moment('2020-07-10T01:00:00.000Z'),

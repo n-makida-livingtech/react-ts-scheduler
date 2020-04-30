@@ -57,7 +57,6 @@ export interface Event {
     endResizable?: boolean;
     showPopover?: boolean;
     movable?: boolean;
-    data?: any;
 }
 export interface EventRecurring {
     recurringEventId: string;
