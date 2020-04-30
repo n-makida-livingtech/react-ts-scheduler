@@ -206,6 +206,7 @@ export interface NewStockArgs {
   end: moment.Moment;
   type?: DnDTypes;
   item?: Event | EventGroup;
+  stock?: number;
 }
 
 export interface MoveEventArgs {
