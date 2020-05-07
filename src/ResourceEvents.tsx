@@ -384,7 +384,10 @@ class ResourceEvents extends Component<ResourceEventsProps, ResourceEventsState>
       <tr style={{ height: '20px' }}>
         <td style={{ width: rowWidth, height: '20px', boxSizing: 'border-box' }}>
           {connectDropTarget(
-            <div ref={this.eventContainerRef} className='event-container' style={{ height: resourceEvents.rowHeight }}>
+            <div
+              ref={this.eventContainerRef}
+              className='event-container'
+              style={{ height: resourceEvents.rowHeight + 1 }}>
               {selectedArea}
               {eventList}
             </div>
