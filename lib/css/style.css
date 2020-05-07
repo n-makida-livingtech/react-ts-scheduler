@@ -351,8 +351,8 @@ table.scheduler-table tr:last-child td {
 .overflow-text {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  padding-right: 5px !important;
+  /* white-space: nowrap; */
+  /* padding-right: 5px !important; */
 }
 
 .status-dot {
