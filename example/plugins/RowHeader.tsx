@@ -49,11 +49,8 @@ export const RowHeaderComponent: React.FC<RowHeaderProps> = (props) => {
         <div title={item.slotName} className='overflow-text header2-text' style={{ textAlign: 'left' }}>
           <span className='slot-cell'>
             {indents}
-            <img
-              src={item.thumbnailImagePath}
-              style={{ height: '100px', margin: '0px 16px 0px 16px', borderRadius: '20px', display: 'block' }}
-            />
-            <a className='slot-text' style={{ margin: '8px 16px 0px 16px', borderRadius: '20px', display: 'block' }}>
+            <img src={item.thumbnailImagePath} style={{ width: '100%', display: 'block' }} />
+            <a className='slot-text' style={{ margin: '8px 8px 0px 8px', display: 'block' }}>
               <p>{item.slotName}</p>
               <p>{item.slotSubName}</p>
             </a>

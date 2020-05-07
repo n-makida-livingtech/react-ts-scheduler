@@ -71,7 +71,8 @@ const data: DemoData = {
       id: '11f4d6da-e866-41ad-9c6d-5dae74950c2a',
       name: '[検証用物件A]-予約リクエスト',
       subName: 'subname',
-      thumbnailImagePath: 'https://news.walkerplus.com/article/205022/1259248_615.jpg',
+      thumbnailImagePath:
+        'https://firebasestorage.googleapis.com/v0/b/now-project-259302.appspot.com/o/public%2Fusers%2FkqGyII6Ie9MrxgfFmswiN9avCf22%2Froom-types%2Fd02a609e-10fd-458a-a484-47c12cf2032f%2F2784e13f-f585-4ad1-b2bb-07c9dd0156b6.jpg?alt=media',
       //   groupOnly: true,
       basicStock: 9,
     },
@@ -94,14 +95,16 @@ const data: DemoData = {
       id: 'a4ad3df8-53c4-4b68-b880-79c816cc6097',
       name: '鹿児島のシェアハウス',
       subName: 'subname',
-      thumbnailImagePath: 'https://news.walkerplus.com/article/205022/1259248_615.jpg',
+      thumbnailImagePath:
+        'https://firebasestorage.googleapis.com/v0/b/now-project-259302.appspot.com/o/public%2Fusers%2FkqGyII6Ie9MrxgfFmswiN9avCf22%2Froom-types%2Fd02a609e-10fd-458a-a484-47c12cf2032f%2F2784e13f-f585-4ad1-b2bb-07c9dd0156b6.jpg?alt=media',
       basicStock: 2,
     },
     {
       id: '12f4d6da-e866-41ad-9c6d-5dae74950c2a',
       name: '[検証用物件A]-予約リクエスト',
       subName: 'subname',
-      thumbnailImagePath: 'https://news.walkerplus.com/article/205022/1259248_615.jpg',
+      thumbnailImagePath:
+        'https://firebasestorage.googleapis.com/v0/b/now-project-259302.appspot.com/o/public%2Fusers%2FkqGyII6Ie9MrxgfFmswiN9avCf22%2Froom-types%2Fd02a609e-10fd-458a-a484-47c12cf2032f%2F2784e13f-f585-4ad1-b2bb-07c9dd0156b6.jpg?alt=media',
       //   groupOnly: true,
       basicStock: 9,
     },
@@ -109,7 +112,8 @@ const data: DemoData = {
       id: '13f4d6da-e866-41ad-9c6d-5dae74950c2a',
       name: '[検証用物件A]-予約リクエスト',
       subName: 'subname',
-      thumbnailImagePath: 'https://news.walkerplus.com/article/205022/1259248_615.jpg',
+      thumbnailImagePath:
+        'https://firebasestorage.googleapis.com/v0/b/now-project-259302.appspot.com/o/public%2Fusers%2FkqGyII6Ie9MrxgfFmswiN9avCf22%2Froom-types%2Fd02a609e-10fd-458a-a484-47c12cf2032f%2F2784e13f-f585-4ad1-b2bb-07c9dd0156b6.jpg?alt=media',
       //   groupOnly: true,
       basicStock: 9,
     },
