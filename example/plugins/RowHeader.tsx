@@ -63,6 +63,7 @@ export const RowHeaderComponent: React.FC<RowHeaderProps> = (props) => {
                 );
               }}>
               {item.slotName}
+              {item.slotSubName}
             </a>
           </span>
         </div>

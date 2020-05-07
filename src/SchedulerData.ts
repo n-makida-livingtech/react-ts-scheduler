@@ -10,6 +10,7 @@ import { Stock, GQLStock, DateStock } from './StockData';
 export interface RowRenderData {
   slotId: string;
   slotName: string;
+  slotSubName: string;
   thumbnailImagePath: string;
   basicStock: number;
   parentId: string | undefined;
@@ -81,6 +82,7 @@ export interface Resource {
   groupOnly?: boolean;
   id: string;
   name: string;
+  subName: string;
   thumbnailImagePath: string;
   basicStock: number;
   parentId?: string;
@@ -895,6 +897,7 @@ export default class SchedulerData {
         thumbnailImagePath: slot.thumbnailImagePath,
         basicStock: slot.basicStock,
         slotName: slot.name,
+        slotSubName: slot.subName,
         parentId: slot.parentId,
         groupOnly: slot.groupOnly,
         hasSummary: false,

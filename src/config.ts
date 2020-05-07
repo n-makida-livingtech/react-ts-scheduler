@@ -3,7 +3,7 @@ import { SummaryPos } from './types/SummaryPos';
 
 export let Config = {
   schedulerWidth: '100%',
-  besidesWidth: 100,
+  besidesWidth: 200,
   schedulerMaxHeight: 0,
   tableHeaderHeight: 80,
   defaultResourceHeight: 148,

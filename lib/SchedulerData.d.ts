@@ -6,6 +6,7 @@ import { Stock, GQLStock, DateStock } from './StockData';
 export interface RowRenderData {
     slotId: string;
     slotName: string;
+    slotSubName: string;
     thumbnailImagePath: string;
     basicStock: number;
     parentId: string | undefined;
@@ -72,6 +73,7 @@ export interface Resource {
     groupOnly?: boolean;
     id: string;
     name: string;
+    subName: string;
     thumbnailImagePath: string;
     basicStock: number;
     parentId?: string;
