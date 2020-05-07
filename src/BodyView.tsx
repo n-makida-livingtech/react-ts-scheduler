@@ -27,7 +27,9 @@ class BodyView extends Component<BodyViewProps> {
         };
 
         const stockCss: CSSProperties = {
-          height: item.rowHeight > config.defaultResourceHeight ? item.rowHeight : config.defaultResourceHeight,
+          height:
+            item.rowHeight > config.defaultResourceHeight ? item.rowHeight - 20 : config.defaultResourceHeight - 20,
+          marginTop: '10px',
         };
 
         if (!!header.nonWorkingTime) {

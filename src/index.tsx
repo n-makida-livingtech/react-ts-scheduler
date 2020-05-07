@@ -422,7 +422,7 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
                         style={{
                           height: config.tableHeaderHeight,
                         }}>
-                        <th className='header3-text'>{resourceName}</th>
+                        {/* <th className='header3-text'>{resourceName}</th> */}
                       </tr>
                     </thead>
                   </table>

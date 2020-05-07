@@ -905,7 +905,7 @@ export default class SchedulerData {
         rowHeight:
           this.config.nonAgendaSlotMinHeight !== 0
             ? this.config.nonAgendaSlotMinHeight + config.defaultResourceHeight
-            : this.config.eventItemLineHeight + 2 + config.defaultResourceHeight,
+            : this.config.eventItemLineHeight + config.defaultResourceHeight,
         headerItems: headerEvents,
         indent: 0,
         hasChildren: false,
@@ -1193,18 +1193,18 @@ export default class SchedulerData {
         });
 
         resourceEvents.hasSummary = hasSummary;
-        if (hasSummary) {
-          const rowsCount =
-            cellMaxEventsCount <= cellMaxEventsCountValue && resourceEvents.rowMaxCount > cellMaxEventsCount
-              ? cellMaxEventsCount
-              : resourceEvents.rowMaxCount;
-          const newRowHeight =
-            (rowsCount + 1) * this.config.eventItemLineHeight +
-            (this.config.creatable && this.config.checkConflict === false ? 0 : 2);
-          if (newRowHeight > resourceEvents.rowHeight) {
-            resourceEvents.rowHeight = newRowHeight;
-          }
-        }
+        // if (hasSummary) {
+        //   const rowsCount =
+        //     cellMaxEventsCount <= cellMaxEventsCountValue && resourceEvents.rowMaxCount > cellMaxEventsCount
+        //       ? cellMaxEventsCount
+        //       : resourceEvents.rowMaxCount;
+        //   const newRowHeight =
+        //     (rowsCount + 1) * this.config.eventItemLineHeight +
+        //     (this.config.creatable && this.config.checkConflict === false ? 0 : 2);
+        //   if (newRowHeight > resourceEvents.rowHeight) {
+        //     resourceEvents.rowHeight = newRowHeight;
+        //   }
+        // }
       });
     }
 

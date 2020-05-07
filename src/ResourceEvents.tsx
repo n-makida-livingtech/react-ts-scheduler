@@ -322,7 +322,8 @@ class ResourceEvents extends Component<ResourceEventsProps, ResourceEventsState>
           config.summaryPos === SummaryPos.TopRight ||
           config.summaryPos === SummaryPos.Top ||
           config.summaryPos === SummaryPos.TopLeft;
-        const marginTop = resourceEvents.hasSummary && isTop ? 1 + config.eventItemLineHeight : 1;
+        // const marginTop = resourceEvents.hasSummary && isTop ? 1 + config.eventItemLineHeight : 1;
+        const marginTop = 0;
         const renderEventsMaxIndex = headerItem.addMore === 0 ? cellMaxEvents : headerItem.addMoreIndex;
 
         headerItem.events.forEach((evt, idx) => {
@@ -359,29 +360,29 @@ class ResourceEvents extends Component<ResourceEventsProps, ResourceEventsState>
           }
         });
 
-        if (headerItem.summary != undefined) {
-          const top = isTop ? 1 : resourceEvents.rowHeight - config.eventItemLineHeight + 1;
-          const l = index * cellWidth + (index > 0 ? 2 : 3);
-          const w = cellWidth - (index > 0 ? 5 : 6);
-          const key = `${resourceEvents.slotId}_${headerItem.time}`;
-          const summary = (
-            <Summary
-              key={key}
-              schedulerData={schedulerData}
-              summary={headerItem.summary}
-              left={l}
-              width={w}
-              top={top}
-            />
-          );
-          eventList.push(summary);
-        }
+        // if (headerItem.summary != undefined) {
+        //   const top = isTop ? 1 : resourceEvents.rowHeight - config.eventItemLineHeight;
+        //   const l = index * cellWidth + (index > 0 ? 2 : 3);
+        //   const w = cellWidth - (index > 0 ? 5 : 6);
+        //   const key = `${resourceEvents.slotId}_${headerItem.time}`;
+        //   const summary = (
+        //     <Summary
+        //       key={key}
+        //       schedulerData={schedulerData}
+        //       summary={headerItem.summary}
+        //       left={l}
+        //       width={w}
+        //       top={top}
+        //     />
+        //   );
+        //   eventList.push(summary);
+        // }
       }
     });
 
     return (
-      <tr>
-        <td style={{ width: rowWidth }}>
+      <tr style={{ height: '20px' }}>
+        <td style={{ width: rowWidth, height: '20px', boxSizing: 'border-box' }}>
           {connectDropTarget(
             <div ref={this.eventContainerRef} className='event-container' style={{ height: resourceEvents.rowHeight }}>
               {selectedArea}

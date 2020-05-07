@@ -51,19 +51,11 @@ export const RowHeaderComponent: React.FC<RowHeaderProps> = (props) => {
             {indents}
             <img
               src={item.thumbnailImagePath}
-              style={{ height: '100px', margin: '24px 12px 24px 0px', borderRadius: '20px', display: 'inline-block' }}
+              style={{ height: '100px', margin: '0px 16px 0px 16px', borderRadius: '20px', display: 'block' }}
             />
-            <a
-              className='slot-text'
-              onClick={() => {
-                alert(
-                  `You just clicked a ${schedulerData.isEventPerspective ? 'task' : 'resource'}.{id: ${
-                    item.slotId
-                  }, name: ${item.slotName}}`
-                );
-              }}>
-              {item.slotName}
-              {item.slotSubName}
+            <a className='slot-text' style={{ margin: '8px 16px 0px 16px', borderRadius: '20px', display: 'block' }}>
+              <p>{item.slotName}</p>
+              <p>{item.slotSubName}</p>
             </a>
           </span>
         </div>

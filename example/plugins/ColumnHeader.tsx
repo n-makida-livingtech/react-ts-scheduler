@@ -90,7 +90,9 @@ export const ColumnHeaderComponent: React.FC<ColumnHeaderProps> = (props) => {
         </th>
       );
     } else {
-      const pFormattedList = config.nonAgendaOtherCellHeaderFormat.split('|').map((i) => moment(header.time).format(i));
+      const pFormattedList = config.nonAgendaOtherCellHeaderFormat
+        .split('|')
+        .map((i) => moment(header.time).format('DD'));
       return (
         <th key={moment(header.time).format()} style={style} className='header3-text'>
           {pFormattedList.map((i, ind) => (
