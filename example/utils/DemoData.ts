@@ -101,8 +101,9 @@ const data: DemoData = {
     },
     {
       id: '12f4d6da-e866-41ad-9c6d-5dae74950c2a',
-      name: '[検証用物件A]-予約リクエスト',
-      subName: 'subname',
+      name:
+        '[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト',
+      subName: 'subnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubname',
       thumbnailImagePath:
         'https://firebasestorage.googleapis.com/v0/b/now-project-259302.appspot.com/o/public%2Fusers%2FkqGyII6Ie9MrxgfFmswiN9avCf22%2Froom-types%2Fd02a609e-10fd-458a-a484-47c12cf2032f%2F2784e13f-f585-4ad1-b2bb-07c9dd0156b6.jpg?alt=media',
       //   groupOnly: true,
@@ -110,8 +111,10 @@ const data: DemoData = {
     },
     {
       id: '13f4d6da-e866-41ad-9c6d-5dae74950c2a',
-      name: '[検証用物件A]-予約リクエスト',
-      subName: 'subname',
+      name:
+        '[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト[検証用物件A]-予約リクエスト',
+      subName:
+        'subnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubnamesubname',
       thumbnailImagePath:
         'https://firebasestorage.googleapis.com/v0/b/now-project-259302.appspot.com/o/public%2Fusers%2FkqGyII6Ie9MrxgfFmswiN9avCf22%2Froom-types%2Fd02a609e-10fd-458a-a484-47c12cf2032f%2F2784e13f-f585-4ad1-b2bb-07c9dd0156b6.jpg?alt=media',
       //   groupOnly: true,

@@ -81,7 +81,7 @@ export const ColumnHeaderComponent: React.FC<ColumnHeaderProps> = (props) => {
       style.color = 'black';
 
       const currentMonthStyle =
-        moment(header.time).format('M') === moment().format('M')
+        moment(header.time).format('Y-M') === moment().format('Y-M')
           ? { backgroundColor: 'gray', borderRadius: 40, padding: '8px 0px', color: 'white' }
           : {};
       return (
