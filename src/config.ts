@@ -6,7 +6,7 @@ export let Config = {
   besidesWidth: 200,
   schedulerMaxHeight: 0,
   tableHeaderHeight: 80,
-  defaultResourceHeight: 64,
+  defaultResourceHeight: 100,
 
   agendaResourceTableWidth: 160,
   agendaMaxEventWidth: 100,

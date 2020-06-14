@@ -340,7 +340,7 @@ table.scheduler-table tr:last-child td {
 
 .event-item {
   margin: 1px 0;
-  width: 100%;
+  /* width: 100%; */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -411,15 +411,15 @@ table.scheduler-table tr:last-child td {
 .selected-area {
   position: absolute;
 }
-
+/* 
 .slot-cell {
   padding-left: 4px;
   padding-right: 4px;
-}
+} */
 
 .slot-text {
   display: inline-block;
-  margin: 40px 0px 24px 12px;
+  margin: 40px 0px 24px 0px;
   vertical-align: top;
   padding-left: 4px;
   padding-right: 4px;
