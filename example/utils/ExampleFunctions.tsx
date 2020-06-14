@@ -25,7 +25,6 @@ export function updateSchedulerDataState(sd?: SchedulerData) {
 }
 
 export const getNow = (): moment.Moment => {
-  console.log('now' + now.format('Y-MM-DD'));
   return now;
 };
 

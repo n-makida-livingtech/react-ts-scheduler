@@ -33,9 +33,20 @@ class HeaderView extends Component<HeaderViewProps> {
         if (dateList[index - 1]) {
           sumDay = dateList[index - 1];
         }
-        dateList.push(Moment(startYear + '-' + (1 + index) + '-1').daysInMonth() + sumDay);
-        widthList.push(Moment(startYear + '-' + (1 + index) + '-1').daysInMonth() * 2);
+        const month = ('0' + (1 + index)).slice(-2);
+
+        dateList.push(
+          Moment(startYear + '-' + month)
+            .endOf('month')
+            .date() + sumDay
+        );
+        widthList.push(
+          Moment(startYear + '-' + month)
+            .endOf('month')
+            .date() * 2
+        );
       }
+
       if (ColumnHeaderFC) {
         const count = 12;
         headerList = headers.map((header, index) => {
