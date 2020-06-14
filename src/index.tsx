@@ -393,7 +393,7 @@ class Scheduler extends Component<SchedulerProps, SchedulerContentState> {
       let resourceContentStyle = {
         overflowX: 'auto',
         overflowY: 'auto',
-        width: resourceTableWidth + resourceScrollbarWidth - 2,
+        width: resourceTableWidth + resourceScrollbarWidth - 2 + 100,
         margin: `0px -${contentScrollbarWidth}px 0px 0px`,
         maxHeight: undefined,
       };
